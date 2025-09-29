@@ -29,7 +29,7 @@ Relevant Coursework: Data Structures & Algorithms, Computer Architecture, Commun
 - Built a **responsive interface** where users could browse, search, and discover 100+ films and shows.  
 - Applied **UI/UX principles** with dynamic content rendering, interactive navigation, and improved accessibility.  
 
-👉 [View Project](Project_README)  
+👉 [View Project](./movie-project/Project_README.md)  
 
 ---
 
