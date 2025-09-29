@@ -10,7 +10,6 @@ Built with **Python (Flask)** on the backend and **HTML/CSS/JavaScript** on the 
 - 📊 Browse **trending movies/shows** updated in real time  
 - 🎨 Responsive design with clean UI/UX  
 - ⚡ Dynamic content rendered with Flask + TMDb API  
-- 📱 Works on desktop and mobile  
 
 ---
 
