@@ -1,6 +1,6 @@
-# Hai Le | GitHub Portfolio
+# Hai Le | Portfolio
 
-👋 Hi, I’m Hai Le, a junior Computer Science student at **Penn State University** passionate about software engineering, full-stack development and front-end applications.  
+👋 Hi, I’m Hai Le, a Computer Science student at **Penn State University** passionate about software engineering, full-stack development and front-end applications.  
 
 This portfolio showcases my **projects, skills, and experiences**. Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/johnnyle3600).  
 
