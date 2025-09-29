@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="static/name.css">
+</head>
+
+<body>
+    <h1>Results For: {{ request.form.get('movie_name') }}</h1>
+    <h3>
+        <a href="{{ url_for('index') }}" class="logo-link"><img src="https://assets.onecompiler.app/43bqurajr/43bqvj4w3/MOVEI.png" alt="Logo Button" width="50"></a>
+    </h3>
+
+    <div class="movie-grid">
+        {% for movie in movies %}
+            {% if movie.poster_path %}
+                <div class="movie-card">
+                    <img src="https://image.tmdb.org/t/p/w300{{ movie.poster_path }}" alt="{{ movie.title }}">
+                    <p>{{ movie.title }}</p>
+                    <p>{{ movie['release_date'] }}</p>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</body>
+</html>

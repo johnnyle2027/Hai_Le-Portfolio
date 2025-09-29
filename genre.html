@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="static/genre.css">
+</head>
+
+<body>
+    <h1>Genres</h1>
+    <h3>
+        <a href="{{ url_for('index') }}" class="logo-link"><img src="https://assets.onecompiler.app/43bqurajr/43bqvj4w3/MOVEI.png" alt="Logo Button" width="50"></a>
+    </h3>
+    
+    <div class="square-container">
+        <form method="POST">
+            <div class="genre-buttons">
+            {% for genre in genres %}
+                <input type="checkbox" id="genre{{ loop.index }}" name="genre" value="{{ genre }}">
+                <label for="genre{{ loop.index }}">{{ genre }}</label>
+            {% endfor %}
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
+    {% if movies %}
+        <ul>
+            {% for movie in movies %}
+                <li>
+                    <strong>{{ movie['title'] }}</strong><br>
+                    <em>{{ movie['release_date'] }}</em><br>
+                    <p>{{ movie['overview'] }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

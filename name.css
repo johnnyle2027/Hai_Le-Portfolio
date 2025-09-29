@@ -1,0 +1,52 @@
+h1 {
+    color: black;
+}
+
+h3 {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-family: "Times-New Roman"; 
+}
+body {
+    background-color: white;
+    text-align: center 
+}
+
+form {
+    color: #101418;
+}
+.logo-link {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 5px;
+    padding: 10px;
+}
+
+.movie-card {
+    text-align: left;
+}
+
+.movie-card img {
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+
+.movie-card img:hover {
+    transform: scale(1.01);
+}
+
+
+
+
+
+

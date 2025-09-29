@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation</title>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <link rel="stylesheet" type="text/css" href="static/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="topnav">
+
+        <div class="left">
+            <a href="{{ url_for('index') }}" class="logo-link"><img src="https://assets.onecompiler.app/43bqurajr/43bqvj4w3/MOVEI.png" alt="Logo Button" width="50"></a>
+            <div class="search-container">
+                <form action="/name" method="post">
+                    <input type="text" placeholder="Search..." name="movie_name">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="dropdown">
+                <button class="dropbtn">Recommendations
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Recommendations</a>
+                    <a href="#">New Releases</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Explore
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/genre">Genres</a>
+                    <a href="#">Rate More</a>
+                </div>
+            </div>
+            
+            <button class="open-button" onclick="openLoginForm()">Login</button>
+            <div class="log-popup" id="loginForm">
+                <form action="/action_page.php" class="log-container">
+                    <h4>Login</h4>
+                    
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter your email" name="email" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="text" placeholder="Enter your password" name="psw" required>
+
+                    <button type="submit" class="btn">Login</button>
+                    <button type="button" class="btn cancel" onclick="closeLoginForm()">Close</button>
+                </form>
+            </div>
+
+            <button class="open-button" onclick="openSignUpForm()">Sign Up</button>
+            <div class="sign-popup" id="signUpForm">
+                <form action="/action_page.php" class="sign-container">
+                    <h1>Create Account</h1>
+
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <button type="submit" class="btn">Create Account</button>
+                    <button type="button" class="btn cancel" onclick="closeSignUpForm()">Close</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+        <h1>Trending Movies</h1>
+        <div class="sidebutton-container">
+            <div class="movie-row" id="movieRow">
+                {% for movie in movies %}
+                <div class="movie-card">
+                    {% if movie.poster_path %}
+                        <img src="https://image.tmdb.org/t/p/w200{{ movie.poster_path }}" alt="{{ movie.title }}">
+                    {% endif %}
+                    <p>{{ movie.title }}</p>
+                    <p>⭐ {{ movie.vote_average }}</p>
+                </div>
+                {% endfor %}
+            </div>
+            <button class="scroll-button leftMovie" onclick="scrollLeftMovie()">&#8249;</button>
+            <button class="scroll-button rightMovie" onclick="scrollRightMovie()">&#8250;</button>
+        </div>
+
+        <h1>Trending Shows</h1>
+        <div class="sidebutton-container">
+            <div class="show-row" id="showRow">
+                {% for show in shows %}
+                <div class="show-card">
+                    {% if show.poster_path %}
+                        <img src="https://image.tmdb.org/t/p/w200{{ show.poster_path }}" alt="{{ show.title }}">
+                    {% else %}
+                        <div style="width:150px; height: 225px; background-color: #ccc">No image</div>
+                    {% endif %}
+                    <p>{{ show.name }}</p>
+                    <p>⭐ {{ show.vote_average }}</p>
+                </div>
+                {% endfor %}
+            </div>
+            <button class="scroll-button leftShow" onclick="scrollLeftShow()">&#8249;</button>
+            <button class="scroll-button rightShow" onclick="scrollRightShow()">&#8250;</button>
+        </div>
+
+        <script>
+            function openLoginForm() {
+                document.getElementById("loginForm").style.display = "block";
+            }
+
+            function closeLoginForm() {
+                document.getElementById("loginForm").style.display = "none";
+            }
+
+            function openSignUpForm() {
+                document.getElementById("signUpForm").style.display = "block";
+            }
+
+            function closeSignUpForm() {
+                document.getElementById("signUpForm").style.display = "none";
+            }
+
+            function scrollLeftMovie() {
+                document.getElementById('movieRow').scrollBy({
+                    left: -1000,
+                    behavior: 'smooth'
+                });
+            }
+
+            function scrollRightMovie() {
+                document.getElementById('movieRow').scrollBy({
+                    left: 1000,
+                    behavior: 'smooth'
+                });
+            }
+
+            function scrollLeftShow() {
+                document.getElementById('showRow').scrollBy({
+                    left: -1000,
+                    behavior: 'smooth'
+                });
+            }
+
+            function scrollRightShow() {
+                document.getElementById('showRow').scrollBy({
+                    left: 1000,
+                    behavior: 'smooth'
+                });
+            }
+        </script>
+</body>
+</html>
