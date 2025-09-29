@@ -35,7 +35,7 @@ Relevant Coursework: Data Structures & Algorithms, Computer Architecture, Commun
 
 ## 📜 Resume
 You can view my full resume here:  
-[📄 Resume (PDF)](./Resume.pdf)
+[📄 Resume (PDF)](./Resume - Hai Le.pdf)
 
 ---
 
