@@ -1,6 +1,6 @@
 # Hai Le | Portfolio
 
-👋 Hi, I’m Hai Le, a Computer Science student at **Penn State University** passionate about software engineering, full-stack development and front-end applications.  
+👋 Hi, I’m Hai Le, a computer science student at **Penn State University** passionate about software engineering, full-stack development and front-end applications.  
 
 This portfolio showcases my **projects, skills, and experiences**. Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/johnnyle3600).  
 
@@ -9,7 +9,7 @@ This portfolio showcases my **projects, skills, and experiences**. Feel free to 
 ## 🎓 Education
 **Pennsylvania State University (Aug 2023 – May 2027)**  
 Bachelor of Science in Computer Science  
-Relevant Coursework: Data Structures & Algorithms, Computer Architecture, Communication Networks, Software Engineering, Discrete Math  
+Relevant Coursework: Data Structures & Algorithms, Computer Architecture, Communication Networks, Software Engineering, Discrete Math, OOD/OOP
 
 ---
 
