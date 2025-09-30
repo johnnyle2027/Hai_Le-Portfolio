@@ -7,7 +7,7 @@
 <body>
     <h1>Genres</h1>
     <h3>
-        <a href="{{ url_for('index') }}" class="logo-link"><img src="https://assets.onecompiler.app/43bqurajr/43bqvj4w3/MOVEI.png" alt="Logo Button" width="50"></a>
+        <a href="{{ url_for('index') }}" class="logo-link">Home</a>
     </h3>
     
     <div class="square-container">
@@ -22,17 +22,21 @@
         </form>
     </div>
 
-
     {% if movies %}
-        <ul>
-            {% for movie in movies %}
-                <li>
+    <ul class="movie-list">
+        {% for movie in movies %}
+            <li class="movie-item">
+                <img src="https://image.tmdb.org/t/p/w200{{ movie['poster_path'] }}" 
+                     alt="{{ movie['title'] }} Poster" class="poster">
+                <div class="movie-info">
                     <strong>{{ movie['title'] }}</strong><br>
                     <em>{{ movie['release_date'] }}</em><br>
                     <p>{{ movie['overview'] }}</p>
-                </li>
-            {% endfor %}
-        </ul>
-    {% endif %}
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
 </body>
 </html>
