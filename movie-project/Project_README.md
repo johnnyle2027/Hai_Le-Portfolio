@@ -29,20 +29,19 @@ rating (star + score). Data comes live from TMDb; sections paginate/scroll for m
 
 ### 2) Genres — Filter picker
 ![Genres picker](../movie-screenshot3.png)
-**What it shows:** A clean genre selector with 20+ pill buttons (Action, Drama, Sci-Fi, etc.).
+**What it shows:** A clean genre selector with multiple movie genres (Action, Drama, Sci-Fi, etc.).
 Users pick one or more genres and hit **Submit**. This triggers a TMDb discover request using
 the selected genre IDs.
 
 ### 3) Genres — Results list (after submit)
 ![Genres results](../movie-screenshot4.png)
 **What it shows:** Genre-filtered results in a readable list layout. Each card includes a poster,
-bolded title, release date (italicized), and an overview snippet. Cards are spaced with soft
-shadows for scannability.
+bolded title, release date, and an overview snippet.
 
 ### 4) Search — Query results grid
 ![Search results](../movie-screenshot2.png)
 **What it shows:** Grid of movies returned for the query **“Superman.”** Each tile shows the
-poster, title, and release date. Powered by the TMDb Search endpoint; responsive layout adapts
+poster, title, and release date. Powered by the TMDb Search endpoint, responsive layout adapts
 to screen width.
 
 ---
