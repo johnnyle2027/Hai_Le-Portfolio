@@ -19,6 +19,6 @@ Built with **Python (Flask)** on the backend and **HTML/CSS/JavaScript** on the 
 - **API**: [TMDb API](https://www.themoviedb.org/documentation/api)  
 - **Data Format**: JSON  
 
-![Homepage](./movie-homepage.png)
+![Homepage](../movie-homepage.png)
 
 ---
