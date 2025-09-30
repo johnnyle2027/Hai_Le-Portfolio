@@ -58,3 +58,32 @@ h1 {
     color: white;
     border-color: #0056b3;
 }
+
+.movie-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.movie-item {
+    display: flex;
+    align-items: flex-start;
+    background: #fff;
+    margin: 15px auto;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    max-width: 800px;
+}
+
+.movie-item .poster {
+    border-radius: 8px;
+    margin-right: 20px;
+    width: 120px;
+    height: auto;
+}
+
+.movie-info {
+    text-align: left;
+    max-width: 600px;
+}
+
