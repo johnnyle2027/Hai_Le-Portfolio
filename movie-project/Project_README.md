@@ -34,13 +34,13 @@ Users pick one or more genres and hit **Submit**. This triggers a TMDb discover 
 the selected genre IDs.
 
 ### 3) Genres — Results list (after submit)
-![Genres results](../movie-screenshot4.png)
+![Genres results](../movie-screenshot3.png)
 **What it shows:** Genre-filtered results in a readable list layout. Each card includes a poster,
 bolded title, release date (italicized), and an overview snippet. Cards are spaced with soft
 shadows for scannability.
 
 ### 4) Search — Query results grid
-![Search results](../movie-screenshot3.png)
+![Search results](../movie-screenshot4.png)
 **What it shows:** Grid of movies returned for the query **“Superman.”** Each tile shows the
 poster, title, and release date. Powered by the TMDb Search endpoint; responsive layout adapts
 to screen width.
